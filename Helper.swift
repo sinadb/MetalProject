@@ -391,7 +391,14 @@ class Mesh{
         }
     }
     
-    init(device : MTLDevice, address : URL, with label : String = "NoLable"){
+    init(device : MTLDevice, address : String, with label : String = "NoLabel"){
+        
+        
+        no_instances = 1
+        
+        let assetURL = Bundle.main.url(
+            forResource: address,
+            withExtension: "obj")!
         
         let mdlMeshVD = MDLVertexDescriptor()
         mdlMeshVD.attributes[0] = MDLVertexAttribute(name: MDLVertexAttributePosition, format: .float4, offset: 0, bufferIndex: 0)
@@ -409,7 +416,7 @@ class Mesh{
         self.device = device
        
         let allocator = MTKMeshBufferAllocator(device: device)
-        let Asset = MDLAsset(url: address, vertexDescriptor: mdlMeshVD, bufferAllocator: allocator)
+        let Asset = MDLAsset(url: assetURL, vertexDescriptor: mdlMeshVD, bufferAllocator: allocator)
         Asset.loadTextures()
         guard let MeshArray = Asset.childObjects(of: MDLMesh.self) as? [MDLMesh] else {
             print("\(label) failed to load")
@@ -884,7 +891,11 @@ class pipeLine {
         library = device.makeDefaultLibrary()!
         let pipelineDescriptor = MTLRenderPipelineDescriptor()
         pipelineDescriptor.maxVertexAmplificationCount = amplificationCount
-        pipelineDescriptor.colorAttachments[0].pixelFormat = colourPixelFormat
+        pipelineDescriptor.colorAttachments[0].pixelFormat = .rgba8Unorm
+        pipelineDescriptor.colorAttachments[1].pixelFormat = .rgba8Unorm
+        pipelineDescriptor.colorAttachments[2].pixelFormat = .rgba8Unorm
+        pipelineDescriptor.colorAttachments[3].pixelFormat = .rgba32Float
+        pipelineDescriptor.colorAttachments[4].pixelFormat = .r32Float
         //pipelineDescriptor.colorAttachments[0].isBlendingEnabled = true
         pipelineDescriptor.colorAttachments[0]
           .sourceRGBBlendFactor = .one

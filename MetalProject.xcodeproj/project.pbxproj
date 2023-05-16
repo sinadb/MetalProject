@@ -13,6 +13,8 @@
 		DA3293E929D2176900C5B842 /* spot_texture.png in Resources */ = {isa = PBXBuildFile; fileRef = DA3293E629D2176900C5B842 /* spot_texture.png */; };
 		DA3293EA29D2176900C5B842 /* spot_material.mtl in Resources */ = {isa = PBXBuildFile; fileRef = DA3293E729D2176900C5B842 /* spot_material.mtl */; };
 		DA3293EB29D2176900C5B842 /* spot_triangulated.obj in Resources */ = {isa = PBXBuildFile; fileRef = DA3293E829D2176900C5B842 /* spot_triangulated.obj */; };
+		DA3401E12A177A1200CAEF4D /* PBRShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = DA3401E02A177A1200CAEF4D /* PBRShaders.metal */; };
+		DA4AE2E22A3262BE000A8AAC /* Mesh.metal in Sources */ = {isa = PBXBuildFile; fileRef = DA4AE2E12A3262BE000A8AAC /* Mesh.metal */; };
 		DA75DE8B2954AE1500251E4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75DE8A2954AE1500251E4C /* AppDelegate.swift */; };
 		DA75DE8D2954AE1500251E4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75DE8C2954AE1500251E4C /* ViewController.swift */; };
 		DA75DE8F2954AE1500251E4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA75DE8E2954AE1500251E4C /* Assets.xcassets */; };
@@ -24,10 +26,10 @@
 		DA75DEBC2955A58B00251E4C /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = DA75DEBB2955A58B00251E4C /* Shaders.metal */; };
 		DA75DEBE2955AEAF00251E4C /* Maths.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75DEBD2955AEAF00251E4C /* Maths.swift */; };
 		DA981A4129DB001500498CA0 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA981A4029DB001500498CA0 /* Scene.swift */; };
+		DA9868662A38F757002DF6C5 /* compute.metal in Sources */ = {isa = PBXBuildFile; fileRef = DA9868652A38F757002DF6C5 /* compute.metal */; };
 		DA99E4542977098900249982 /* compute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA99E4532977098900249982 /* compute.swift */; };
-		DA9B2B662A08394F003B1BAE /* test.metal in Sources */ = {isa = PBXBuildFile; fileRef = DA9B2B652A08394F003B1BAE /* test.metal */; };
+		DA9B2B662A08394F003B1BAE /* compute.metal in Sources */ = {isa = PBXBuildFile; fileRef = DA9B2B652A08394F003B1BAE /* compute.metal */; };
 		DAA6AAF129BBC16700BF03E3 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA6AAF029BBC16700BF03E3 /* constants.swift */; };
-		DACCA4852A142A2600B0B598 /* blub_triangulated.obj in Resources */ = {isa = PBXBuildFile; fileRef = DACCA4842A142A2600B0B598 /* blub_triangulated.obj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		DA3293E629D2176900C5B842 /* spot_texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spot_texture.png; sourceTree = "<group>"; };
 		DA3293E729D2176900C5B842 /* spot_material.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = spot_material.mtl; sourceTree = "<group>"; };
 		DA3293E829D2176900C5B842 /* spot_triangulated.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = spot_triangulated.obj; sourceTree = "<group>"; };
+		DA3401E02A177A1200CAEF4D /* PBRShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = PBRShaders.metal; sourceTree = "<group>"; };
+		DA4AE2E12A3262BE000A8AAC /* Mesh.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Mesh.metal; sourceTree = "<group>"; };
 		DA75DE872954AE1500251E4C /* MetalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA75DE8A2954AE1500251E4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA75DE8C2954AE1500251E4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,10 +75,10 @@
 		DA75DEBB2955A58B00251E4C /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		DA75DEBD2955AEAF00251E4C /* Maths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maths.swift; sourceTree = "<group>"; };
 		DA981A4029DB001500498CA0 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		DA9868652A38F757002DF6C5 /* compute.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; name = compute.metal; path = ../compute.metal; sourceTree = "<group>"; };
 		DA99E4532977098900249982 /* compute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = compute.swift; sourceTree = "<group>"; };
-		DA9B2B652A08394F003B1BAE /* test.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = test.metal; sourceTree = "<group>"; };
+		DA9B2B652A08394F003B1BAE /* compute.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = compute.metal; sourceTree = "<group>"; };
 		DAA6AAF029BBC16700BF03E3 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
-		DACCA4842A142A2600B0B598 /* blub_triangulated.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = blub_triangulated.obj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +112,6 @@
 				DA3293E629D2176900C5B842 /* spot_texture.png */,
 				DA3293E729D2176900C5B842 /* spot_material.mtl */,
 				DA3293E829D2176900C5B842 /* spot_triangulated.obj */,
-				DACCA4842A142A2600B0B598 /* blub_triangulated.obj */,
 			);
 			path = Models;
 			sourceTree = SOURCE_ROOT;
@@ -139,8 +142,11 @@
 				DA3293E529D2176900C5B842 /* Models */,
 				DA21FF3D29CB9F8B00F5C549 /* Camera.swift */,
 				DA981A4029DB001500498CA0 /* Scene.swift */,
+				DA9868652A38F757002DF6C5 /* compute.metal */,
 				DA75DEBB2955A58B00251E4C /* Shaders.metal */,
-				DA9B2B652A08394F003B1BAE /* test.metal */,
+				DA3401E02A177A1200CAEF4D /* PBRShaders.metal */,
+				DA4AE2E12A3262BE000A8AAC /* Mesh.metal */,
+				DA9B2B652A08394F003B1BAE /* compute.metal */,
 				DAA6AAF029BBC16700BF03E3 /* constants.swift */,
 				DA1EB18329B388ED00942766 /* Helper.swift */,
 				DA99E4532977098900249982 /* compute.swift */,
@@ -290,7 +296,6 @@
 				DA3293EB29D2176900C5B842 /* spot_triangulated.obj in Resources */,
 				DA75DE8F2954AE1500251E4C /* Assets.xcassets in Resources */,
 				DA3293E929D2176900C5B842 /* spot_texture.png in Resources */,
-				DACCA4852A142A2600B0B598 /* blub_triangulated.obj in Resources */,
 				DA75DE922954AE1500251E4C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,14 +322,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA75DEBC2955A58B00251E4C /* Shaders.metal in Sources */,
-				DA9B2B662A08394F003B1BAE /* test.metal in Sources */,
+				DA9B2B662A08394F003B1BAE /* compute.metal in Sources */,
 				DA1EB18429B388ED00942766 /* Helper.swift in Sources */,
+				DA9868662A38F757002DF6C5 /* compute.metal in Sources */,
 				DA0A77482A0E603600639F51 /* utils.swift in Sources */,
 				DA981A4129DB001500498CA0 /* Scene.swift in Sources */,
 				DA75DE8D2954AE1500251E4C /* ViewController.swift in Sources */,
 				DA75DEB62954AE3300251E4C /* Renderer.swift in Sources */,
 				DA99E4542977098900249982 /* compute.swift in Sources */,
 				DA75DEBE2955AEAF00251E4C /* Maths.swift in Sources */,
+				DA3401E12A177A1200CAEF4D /* PBRShaders.metal in Sources */,
+				DA4AE2E22A3262BE000A8AAC /* Mesh.metal in Sources */,
 				DA75DE8B2954AE1500251E4C /* AppDelegate.swift in Sources */,
 				DAA6AAF129BBC16700BF03E3 /* constants.swift in Sources */,
 				DA21FF3E29CB9F8B00F5C549 /* Camera.swift in Sources */,
@@ -643,7 +651,7 @@
 				DA75DEAB2954AE1500251E4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
 		DA75DEAC2954AE1500251E4C /* Build configuration list for PBXNativeTarget "MetalProject" */ = {
 			isa = XCConfigurationList;
@@ -652,7 +660,7 @@
 				DA75DEAE2954AE1500251E4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
 		DA75DEAF2954AE1500251E4C /* Build configuration list for PBXNativeTarget "MetalProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -661,7 +669,7 @@
 				DA75DEB12954AE1500251E4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
 		DA75DEB22954AE1500251E4C /* Build configuration list for PBXNativeTarget "MetalProjectUITests" */ = {
 			isa = XCConfigurationList;
@@ -670,7 +678,7 @@
 				DA75DEB42954AE1500251E4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

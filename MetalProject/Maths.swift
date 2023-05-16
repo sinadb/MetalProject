@@ -54,8 +54,10 @@ extension simd_float4x4{
         let sy = 1 / tan(fovRadians * 0.5)
         let sx = sy / aspectRatio
         let zRange = far - near
-        let sz = -(far + near) / zRange
-        let tz = -2 * far * near / zRange
+        //let sz = -(far + near) / zRange
+        let sz = far / (near - far)
+        //let tz = -2 * far * near / zRange
+        let tz = (far * near) / (near - far)
         self.init(simd_float4(sx, 0,  0,  0),
                   simd_float4(0, sy,  0,  0),
                   simd_float4(0,  0, sz, -1),

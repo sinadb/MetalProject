@@ -110,10 +110,8 @@ class Voxel {
     init(device : MTLDevice, address : String, minmax : [simd_float3], gridLength : Float){
         cubeBB = minmax
         length = gridLength
-        let assetURL = Bundle.main.url(
-            forResource: address,
-            withExtension: "obj")!
-        meshToBeVoxelizes = Mesh(device: device, address: assetURL)
+      
+        meshToBeVoxelizes = Mesh(device: device, address: address)
         let centre = (minmax[0]+minmax[1]) * 0.5
         let modelMatrix = create_modelMatrix(translation: simd_float3(0,0,-13),scale: simd_float3(1.8))
         meshToBeVoxelizes.createInstance(with: modelMatrix, and: simd_float4(1,1,0,1))
